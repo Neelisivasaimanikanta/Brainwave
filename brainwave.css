@@ -1,0 +1,204 @@
+/* brainwave.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-15px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .hero-section {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    animation: slideInFromLeft 1.5s ease;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    animation: slideInFromRight 1.5s ease;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .cta-button {
+    background: #ffcc00;
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    transform: scale(1.1);
+    background-color: #ff9900;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+  }
+  
+  .primary-button {
+    background: #ffcc00;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    animation: fadeUp 2s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .primary-button:hover {
+    transform: translateY(-5px);
+    background: #ff9900;
+  }
+  
+  .features-section,
+  .testimonials-section,
+  .pricing-section,
+  .faq-section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .features-section {
+    animation: fadeIn 2s ease;
+  }
+  
+  .feature-grid,
+  .testimonial-grid,
+  .pricing-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .feature-item,
+  .pricing-plan,
+  .testimonial-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    animation: fadeUp 1.5s ease-in-out;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-item:hover,
+  .pricing-plan:hover,
+  .testimonial-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .popular {
+    border: 2px solid #ffcc00;
+    animation: bounce 2s infinite;
+  }
+  
+  .faq-item h3 {
+    margin: 10px 0;
+  }
+  
+  .footer {
+    background: #1e3c72;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    color: #ffcc00;
+  }
